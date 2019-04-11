@@ -1,5 +1,4 @@
-const crypto = require("crypto");
-const cryptoB = require("crypto-browserify");
+const crypto = require("crypto-browserify");
 const url = require("url");
 
 const EMPTY_STRING = "";
@@ -146,7 +145,7 @@ OAuth.getNonce = function getNonce() {
 	const NONCE_LENGTH = 8;
 	const VALID_CHARS = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 
-	const bytes = cryptoB.randomBytes(NONCE_LENGTH);
+	const bytes = crypto.randomBytes(NONCE_LENGTH);
 	const value = new Array(NONCE_LENGTH).fill(0);
 
 	return value.reduce((acc, val, i) => {
