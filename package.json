@@ -21,5 +21,8 @@
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
+  },
+  "dependencies": {
+    "crypto-browserify": "^3.12.0"
   }
 }
